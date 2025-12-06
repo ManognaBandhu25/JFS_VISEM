@@ -1,0 +1,42 @@
+mvn commands:
+
+mvn clean-delete old builds
+mvn compile-compile code
+mvn test-run tests
+mvn-package-create jar/war
+mvn-install-save to local repository
+mvn clean install-clean+build+install
+
+creating a maven project(using command line):
+
+mvn archetype:generate -DgroupId=com.example -DartifactId=myproject -DarchetypeArtifactId=
+maven-archetype-quickstart -DinteractiveMode=false
+
+-D=Define parameter for maven command
+groupId-refers package name
+artfactId-refers project name
+->archetypeArtifactId-refers type of project if u want to create simple java project then u can write "maven-archetype-quickstart"
+->if we want to create web application u can write maven-archetype-webapp.
+interactiveMode-the default value is false,if u want to communicate with the user about dependencies then u can use the value as true
+
+requirements to do a maven project
+1.java,apache maven
+Note:set the environment variables(java_home,maven_home,edit the path variable add these files upto the bin folder.
+
+2.verification
+java -version in cmd
+mvn -v
+
+3.mvn archetype:generate -DgroupId=com.example -DartifactId=myproject -DarchetypeArtifactId=
+maven-archetype-quickstart -DinteractiveMode=false
+
+for ex:mvn archetype:generate -DgroupId=com.skillnext -DartifactId=Sample -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+4.cd Sample
+5.verify the files by using dir command(src folder,pom.xml file
+6.mvn compile
+7.mvn package(generate jar or var file)
+8.cd target
+9.verify the jar file by using dir command
+10.for execution of our application by using the following command java -cp <classpath> <mainclass>
+ex:java -cp Sample-1.0-SNAPSHOT.jar com.Skillnext.App
