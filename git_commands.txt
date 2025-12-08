@@ -22,13 +22,18 @@ you can change the existing files in local repo
 If you want to retrieve the remote repo to local pc
 
 git clone <remote-url>
-
+-------------------------------------------
 to update already once updated
 git pull origin main --allow-unrelated-histories
 git add .
 git commit -m "Merged and updated project"
 git push
+-----------------------------------------
+to update specific file
 
+git add specificfile.txt
+git commit -m "Updated specific file only"
+git push
 
 
 
