@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class App {
 
-    // method to generate fibonacci series
     public static void generateFibonacci(int n) {
         int a = 0, b = 1;
 
